@@ -1,0 +1,16 @@
+.btn-styling {
+  border-color: #5bb463;
+  color: #5bb463;
+  background-color: #fff;
+}
+
+$transition-duration: 0.5s;
+.btn-styling:hover {
+  background-color: #38883f !important;
+  color: rgb(255, 255, 255);
+  transition: all $transition-duration ease;
+  -webkit-transition: all $transition-duration ease;
+  -moz-transition: all $transition-duration ease;
+  -o-transition: all $transition-duration ease;
+  -ms-transition: all $transition-duration ease;
+}
