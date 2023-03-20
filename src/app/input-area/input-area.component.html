@@ -1,0 +1,70 @@
+<div class="container text-center" style="margin-top: 20px">
+  <div class="row">
+    <div class="form-floating">
+      <textarea
+        class="textarea"
+        placeholder="Leave a comment here"
+        id="floatingTextarea"
+        maxlength="400"
+        [value]="textareaValue"
+        (input)="onTextareaValueChange($event)"
+      ></textarea>
+    </div>
+  </div>
+  <div class="row row-cols-2 align-items-center" style="margin-top: 20px">
+    <div class="col-6">
+      <div
+        class="btn-group"
+        role="group"
+        aria-label="Basic radio toggle button group"
+      >
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradio1"
+          autocomplete="off"
+          value="bug"
+          (change)="onChange($event)"
+          [checked]="bugCheck"
+        />
+        <label class="btn btn-styling" for="btnradio1">Bug</label>
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradio2"
+          autocomplete="off"
+          value="feature"
+          (change)="onChange($event)"
+          [checked]="featureCheck"
+        />
+        <label class="btn btn-styling" for="btnradio2">Feature</label>
+      </div>
+    </div>
+    <div class="col-6">
+      <button
+        class="btn btn-styling"
+        [disabled]="!allowSending"
+        (click)="onClickSend()"
+      >
+        Send
+      </button>
+    </div>
+  </div>
+  <div class="row align-items-center" style="margin-top: 20px">
+    <div class="col">
+      <div class="g-recaptcha">
+        <!--[hidden]="hideCaptcha"-->
+        <re-captcha
+          style="display: inline-block"
+          (resolved)="resolved($event)"
+          siteKey="6LcxtvokAAAAANRJnB7d4r0yvTcGvw1RLJZBUTKi"
+          theme="dark"
+        ></re-captcha>
+      </div>
+    </div>
+  </div>
+  <app-screenshot-tool></app-screenshot-tool>
+</div>
