@@ -1,0 +1,10 @@
+{
+  "name": "Shared Creativity",
+  "description": "...",
+  "version": "0.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "content_security_policy": "script-src 'self' https://www.google.com/recaptcha/  https://www.gstatic.com/recaptcha/; object-src 'self';"
+}
